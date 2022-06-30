@@ -1,0 +1,12 @@
+<%-include("partials/header")-%>
+
+<h1>Home</h1>
+<p><%= homeStartingContent %></p>
+
+<% allDrafts.forEach(function(draft){ %>
+  <% const draftPreview = draft.text.slice(0, 101) + " ..." %>
+  <h1><%= draft.title %></h1>
+  <p><%= draftPreview %></p>
+  <a href=<%= "/journal/" + draft.title %> >Read More</a>
+<% }); %>
+<%-include("partials/footer")-%>
