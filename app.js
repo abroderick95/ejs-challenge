@@ -74,6 +74,12 @@ app.post("/compose", function (req, res) {
   res.redirect("/");
 });
 
-app.listen(3000, function () {
+// eslint-disable-next-line no-undef
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+
+app.listen(port, function () {
   console.log("You can do this! I believe in you. Just keep going.");
 });
