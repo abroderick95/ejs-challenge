@@ -61,6 +61,7 @@ app.get("/journal/:topic", function (req, res) {
       text: matchedDraft.text,
     });
   } else {
+    res.redirect("/");
     console.log("Match not found.");
   }
 });
