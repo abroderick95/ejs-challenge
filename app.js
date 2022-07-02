@@ -70,6 +70,7 @@ app.post("/compose", function (req, res) {
   const draftPublish = {
     title: req.body.draftTitle,
     text: req.body.draftText,
+    url: _.kebabCase(req.body.draftTitle),
   };
   allDrafts.push(draftPublish);
   res.redirect("/");

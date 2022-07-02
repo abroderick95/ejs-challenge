@@ -7,6 +7,7 @@
   <% const draftPreview = draft.text.slice(0, 101) + " ..." %>
   <h1><%= draft.title %></h1>
   <p><%= draftPreview %></p>
-  <a href=<%= "/journal/" + draft.title %> >Read More</a>
+  <a href=<%= "/journal/" + draft.url %> >Read More</a>
+ <% console.log(draft); %>
 <% }); %>
 <%-include("partials/footer")-%>
